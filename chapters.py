@@ -1,38 +1,40 @@
+# chapters.py
 from mutagen.mp4 import MP4
 
-def to_timestamp(seconds):
-    # Convert seconds → mm:ss.ffffff
-    m = int(seconds // 60)
-    s = seconds % 60
-    return f"{m:02d}:{s:09.6f}"
+class Chapter:
+    def __init__(self, index, title, start, end):
+        self.index = index
+        self.title = title
+        self.start = start
+        self.end = end
 
-file = "audiobook.m4b"
-mp4 = MP4(file)
+    def __repr__(self):
+        return f"<Chapter {self.index}: {self.title} ({self.start} → {self.end})>"
 
-chapters = mp4.chapters
-duration = mp4.info.length  # total duration in seconds
 
-if not chapters:
-    print("No chapters found.")
-    exit()
+class ChapterReader:
+    def __init__(self, filename):
+        self.filename = filename
+        self.mp4 = MP4(filename)
+        self.chapters = []
 
-# Compute end times
-end_times = []
-for idx, chap in enumerate(chapters):
-    if idx < len(chapters) - 1:
-        end_times.append(chapters[idx + 1].start)  # next chapter start
-    else:
-        end_times.append(duration)  # last chapter ends at file duration
+    def load(self):
+        raw = self.mp4.chapters
+        if not raw:
+            raise ValueError("No chapters found in file.")
 
-# Display chapters
-for i, chap in enumerate(chapters):
-    title = chap.title if chap.title else f"Chapter {i+1}"
-    start_seconds = chap.start
-    end_seconds = end_times[i]
+        duration = self.mp4.info.length
 
-    print(f"=== Chapter {i+1} ===")
-    print(f"Title: {title}")
-    print(f"Start (sec):   {start_seconds:.6f}")
-    print(f"Start (mm:ss): {to_timestamp(start_seconds)}")
-    print(f"End   (mm:ss): {to_timestamp(end_seconds)}")
-    print()
+        # Compute end times
+        for i, chap in enumerate(raw):
+            title = chap.title if chap.title else f"Chapter {i+1}"
+            start = chap.start
+
+            if i < len(raw) - 1:
+                end = raw[i + 1].start
+            else:
+                end = duration
+
+            self.chapters.append(Chapter(i + 1, title, start, end))
+
+        return self.chapters
