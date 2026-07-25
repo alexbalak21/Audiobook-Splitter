@@ -38,6 +38,7 @@ def main():
         chapters = reader.load()
 
         splitter = AudioSplitter(INPUT_FILE)
+        reader.extract_cover(splitter.output_dir)
         splitter.split(chapters)
     except Exception:
         logger.exception("Splitting failed")

@@ -45,3 +45,24 @@ class ChapterReader:
 
         logger.info("Loaded %d chapter(s) from '%s'", len(self.chapters), self.filename)
         return self.chapters
+
+    def extract_cover(self, output_dir="output"):
+        """Save the embedded cover art (if any) as output/folder.jpg or folder.png."""
+        import os
+        from mutagen.mp4 import MP4Cover
+
+        covers = self.mp4.tags.get("covr") if self.mp4.tags else None
+        if not covers:
+            logger.info("No embedded cover art found in '%s'", self.filename)
+            return None
+
+        cover = covers[0]
+        ext = "png" if cover.imageformat == MP4Cover.FORMAT_PNG else "jpg"
+        out_path = os.path.join(output_dir, f"folder.{ext}")
+
+        os.makedirs(output_dir, exist_ok=True)
+        with open(out_path, "wb") as f:
+            f.write(bytes(cover))
+
+        logger.info("Saved cover art to '%s'", out_path)
+        return out_path
