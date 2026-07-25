@@ -1,0 +1,58 @@
+2026-07-25 17:13:59,178 [DEBUG] chapters: File duration: 24562.40s, raw chapter count: 18
+2026-07-25 17:13:59,179 [DEBUG] chapters: Parsed chapter 1: 'Chapter 1' start=0.00s end=987.00s
+2026-07-25 17:13:59,179 [DEBUG] chapters: Parsed chapter 2: 'Chapter 2' start=987.00s end=1987.00s
+2026-07-25 17:13:59,179 [DEBUG] chapters: Parsed chapter 3: 'Chapter 3' start=1987.00s end=3821.00s
+2026-07-25 17:13:59,180 [DEBUG] chapters: Parsed chapter 4: 'Chapter 4' start=3821.00s end=5203.00s
+2026-07-25 17:13:59,180 [DEBUG] chapters: Parsed chapter 5: 'Chapter 5' start=5203.00s end=6920.00s
+2026-07-25 17:13:59,180 [DEBUG] chapters: Parsed chapter 6: 'Chapter 6' start=6920.00s end=8534.00s
+2026-07-25 17:13:59,180 [DEBUG] chapters: Parsed chapter 7: 'Chapter 7' start=8534.00s end=10593.00s
+2026-07-25 17:13:59,180 [DEBUG] chapters: Parsed chapter 8: 'Chapter 8' start=10593.00s end=12597.00s
+2026-07-25 17:13:59,180 [DEBUG] chapters: Parsed chapter 9: 'Chapter 9' start=12597.00s end=14037.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 10: 'Chapter 10' start=14037.00s end=16321.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 11: 'Chapter 11' start=16321.00s end=17965.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 12: 'Chapter 12' start=17965.00s end=19198.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 13: 'Chapter 13' start=19198.00s end=20715.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 14: 'Chapter 14' start=20715.00s end=21931.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 15: 'Chapter 15' start=21931.00s end=22831.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 16: 'Chapter 16' start=22831.00s end=24394.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 17: 'Chapter 17' start=24394.00s end=24548.00s
+2026-07-25 17:13:59,181 [DEBUG] chapters: Parsed chapter 18: 'Closing' start=24548.00s end=24562.40s
+2026-07-25 17:13:59,182 [INFO] chapters: Loaded 18 chapter(s) from 'audiobook.m4b'
+2026-07-25 17:13:59,182 [INFO] splitter: Splitting 'audiobook.m4b' into 18 chapter(s)
+2026-07-25 17:13:59,182 [INFO] splitter: [1/18] Chapter 1  (start=0.00s, duration=987.00s) -> output\01 - Chapter 1.m4a
+2026-07-25 17:13:59,932 [DEBUG] splitter: Created: output\01 - Chapter 1.m4a
+2026-07-25 17:13:59,932 [INFO] splitter: [2/18] Chapter 2  (start=987.00s, duration=1000.00s) -> output\02 - Chapter 2.m4a
+2026-07-25 17:14:00,708 [DEBUG] splitter: Created: output\02 - Chapter 2.m4a
+2026-07-25 17:14:00,709 [INFO] splitter: [3/18] Chapter 3  (start=1987.00s, duration=1834.00s) -> output\03 - Chapter 3.m4a
+2026-07-25 17:14:02,200 [DEBUG] splitter: Created: output\03 - Chapter 3.m4a
+2026-07-25 17:14:02,201 [INFO] splitter: [4/18] Chapter 4  (start=3821.00s, duration=1382.00s) -> output\04 - Chapter 4.m4a
+2026-07-25 17:14:03,094 [DEBUG] splitter: Created: output\04 - Chapter 4.m4a
+2026-07-25 17:14:03,094 [INFO] splitter: [5/18] Chapter 5  (start=5203.00s, duration=1717.00s) -> output\05 - Chapter 5.m4a
+2026-07-25 17:14:04,134 [DEBUG] splitter: Created: output\05 - Chapter 5.m4a
+2026-07-25 17:14:04,134 [INFO] splitter: [6/18] Chapter 6  (start=6920.00s, duration=1614.00s) -> output\06 - Chapter 6.m4a
+2026-07-25 17:14:05,290 [DEBUG] splitter: Created: output\06 - Chapter 6.m4a
+2026-07-25 17:14:05,290 [INFO] splitter: [7/18] Chapter 7  (start=8534.00s, duration=2059.00s) -> output\07 - Chapter 7.m4a
+2026-07-25 17:14:06,515 [DEBUG] splitter: Created: output\07 - Chapter 7.m4a
+2026-07-25 17:14:06,516 [INFO] splitter: [8/18] Chapter 8  (start=10593.00s, duration=2004.00s) -> output\08 - Chapter 8.m4a
+2026-07-25 17:14:07,737 [DEBUG] splitter: Created: output\08 - Chapter 8.m4a
+2026-07-25 17:14:07,737 [INFO] splitter: [9/18] Chapter 9  (start=12597.00s, duration=1440.00s) -> output\09 - Chapter 9.m4a
+2026-07-25 17:14:08,633 [DEBUG] splitter: Created: output\09 - Chapter 9.m4a
+2026-07-25 17:14:08,634 [INFO] splitter: [10/18] Chapter 10  (start=14037.00s, duration=2284.00s) -> output\10 - Chapter 10.m4a
+2026-07-25 17:14:10,053 [DEBUG] splitter: Created: output\10 - Chapter 10.m4a
+2026-07-25 17:14:10,053 [INFO] splitter: [11/18] Chapter 11  (start=16321.00s, duration=1644.00s) -> output\11 - Chapter 11.m4a
+2026-07-25 17:14:11,264 [DEBUG] splitter: Created: output\11 - Chapter 11.m4a
+2026-07-25 17:14:11,265 [INFO] splitter: [12/18] Chapter 12  (start=17965.00s, duration=1233.00s) -> output\12 - Chapter 12.m4a
+2026-07-25 17:14:12,063 [DEBUG] splitter: Created: output\12 - Chapter 12.m4a
+2026-07-25 17:14:12,064 [INFO] splitter: [13/18] Chapter 13  (start=19198.00s, duration=1517.00s) -> output\13 - Chapter 13.m4a
+2026-07-25 17:14:13,127 [DEBUG] splitter: Created: output\13 - Chapter 13.m4a
+2026-07-25 17:14:13,128 [INFO] splitter: [14/18] Chapter 14  (start=20715.00s, duration=1216.00s) -> output\14 - Chapter 14.m4a
+2026-07-25 17:14:13,927 [DEBUG] splitter: Created: output\14 - Chapter 14.m4a
+2026-07-25 17:14:13,927 [INFO] splitter: [15/18] Chapter 15  (start=21931.00s, duration=900.00s) -> output\15 - Chapter 15.m4a
+2026-07-25 17:14:14,590 [DEBUG] splitter: Created: output\15 - Chapter 15.m4a
+2026-07-25 17:14:14,591 [INFO] splitter: [16/18] Chapter 16  (start=22831.00s, duration=1563.00s) -> output\16 - Chapter 16.m4a
+2026-07-25 17:14:15,542 [DEBUG] splitter: Created: output\16 - Chapter 16.m4a
+2026-07-25 17:14:15,542 [INFO] splitter: [17/18] Chapter 17  (start=24394.00s, duration=154.00s) -> output\17 - Chapter 17.m4a
+2026-07-25 17:14:15,917 [DEBUG] splitter: Created: output\17 - Chapter 17.m4a
+2026-07-25 17:14:15,917 [INFO] splitter: [18/18] Closing  (start=24548.00s, duration=14.40s) -> output\18 - Closing.m4a
+2026-07-25 17:14:16,242 [DEBUG] splitter: Created: output\18 - Closing.m4a
+2026-07-25 17:14:16,242 [INFO] splitter: Done. 18 file(s) written to 'output'

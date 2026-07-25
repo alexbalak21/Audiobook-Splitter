@@ -1,2 +1,5 @@
 env/
 *.m4b
+*.m4a
+output/
+*.zip

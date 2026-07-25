@@ -1,5 +1,9 @@
 # chapters.py
+import logging
+
 from mutagen.mp4 import MP4
+
+logger = logging.getLogger(__name__)
 
 class Chapter:
     def __init__(self, index, title, start, end):
@@ -24,6 +28,7 @@ class ChapterReader:
             raise ValueError("No chapters found in file.")
 
         duration = self.mp4.info.length
+        logger.debug("File duration: %.2fs, raw chapter count: %d", duration, len(raw))
 
         # Compute end times
         for i, chap in enumerate(raw):
@@ -36,5 +41,7 @@ class ChapterReader:
                 end = duration
 
             self.chapters.append(Chapter(i + 1, title, start, end))
+            logger.debug("Parsed chapter %d: '%s' start=%.2fs end=%.2fs", i + 1, title, start, end)
 
+        logger.info("Loaded %d chapter(s) from '%s'", len(self.chapters), self.filename)
         return self.chapters
