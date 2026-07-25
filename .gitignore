@@ -3,3 +3,4 @@ env/
 *.m4a
 output/
 *.zip
+*.log
